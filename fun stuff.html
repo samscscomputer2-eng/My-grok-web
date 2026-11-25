@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fun Stuff · My Little Blog</title>
+  <style>
+    :root {
+      --pink: #f8a5c2;
+      --light-pink: #fff0f5;
+      --soft-pink: #ffe4ec;
+      --text: #4a4a4a;
+      --muted: #888;
+      --white: #ffffff;
+      --radius: 16px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: var(--light-pink);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--white);
+      padding: 1.5rem 2rem;
+      border-bottom: 2px solid var(--soft-pink);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--pink);
+      text-decoration: none;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 0.95rem;
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      transition: all 0.2s;
+    }
+
+    nav a:hover {
+      background: var(--soft-pink);
+      color: var(--pink);
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .page-title {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .page-title h1 {
+      font-size: 2rem;
+      color: var(--pink);
+      margin-bottom: 0.4rem;
+    }
+
+    .page-title p {
+      color: var(--muted);
+    }
+
+    .fun-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .fun-card {
+      background: var(--white);
+      border: 1px solid var(--soft-pink);
+      border-radius: var(--radius);
+      padding: 1.8rem;
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .fun-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(248, 165, 194, 0.2);
+      border-color: var(--pink);
+    }
+
+    .fun-card h2 {
+      font-size: 1.3rem;
+      color: var(--pink);
+    }
+
+    .fun-card p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      flex-grow: 1;
+    }
+
+    .fun-card .tag {
+      font-size: 0.8rem;
+      color: var(--pink);
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--pink);
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav a {
+        margin: 0 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">🌸 My Little Blog</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-title">
+      <h1>Fun Stuff</h1>
+      <p> My favorite little corners of the internet to waste time happily [not sponsored] </p>
+    </div>
+
+    <div class="fun-grid">
+
+      <!-- neal.fun main -->
+      <a href="https://neal.fun/" target="_blank" class="fun-card">
+        <h2>neal.fun</h2>
+        <p>The official site full of weird, wonderful, and strangely addictive interactive toys.</p>
+        <span class="tag">Click me →</span>
+      </a>
+
+      <!-- Poki -->
+      <a href="https://poki.com/" target="_blank" class="fun-card">
+        <h2>Poki Games</h2>
+        <p>Hundreds of free online games. Perfect when you just want to play something quickly.</p>
+        <span class="tag">Click me →</span>
+      </a>
+
+      <!-- Popular neal.fun games -->
+      <a href="https://neal.fun/stimulation-clicker/" target="_blank" class="fun-card">
+        <h2>Stimulation Clicker</h2>
+        <p>One of the most addictive games on neal.fun. Just try not to play for an hour.</p>
+        <span class="tag">neal.fun</span>
+      </a>
+
+      <a href="https://neal.fun/password-game/" target="_blank" class="fun-card">
+        <h2>The Password Game</h2>
+        <p>Create a password that follows increasingly ridiculous rules. Extremely fun.</p>
+        <span class="tag">neal.fun</span>
+      </a>
+
+      <a href="https://neal.fun/size-of-space/" target="_blank" class="fun-card">
+        <h2>Size of Space</h2>
+        <p>Scroll through the universe from the smallest things to the largest.</p>
+        <span class="tag">neal.fun</span>
+      </a>
+
+      <a href="https://poki.com/en/online" target="_blank" class="fun-card">
+        <h2>Poki Online Games</h2>
+        <p>Jump straight into multiplayer and popular online games on Poki.</p>
+        <span class="tag">Poki</span>
+      </a>
+
+    </div>
+  </main>
+
+  <footer>
+    <p><a href="index.html">← Back to home</a></p>
+  </footer>
+
+</body>
+</html>

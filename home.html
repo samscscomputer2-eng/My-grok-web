@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Little Blog</title>
+  <style>
+    :root {
+      --pink: #f8a5c2;
+      --light-pink: #fff0f5;
+      --soft-pink: #ffe4ec;
+      --text: #4a4a4a;
+      --muted: #888;
+      --white: #ffffff;
+      --radius: 16px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: var(--light-pink);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--white);
+      padding: 1.5rem 2rem;
+      border-bottom: 2px solid var(--soft-pink);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--pink);
+      text-decoration: none;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 0.95rem;
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      transition: all 0.2s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: var(--soft-pink);
+      color: var(--pink);
+    }
+
+    main {
+      max-width: 720px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .intro {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: var(--radius);
+      margin-bottom: 2.5rem;
+      text-align: center;
+      border: 1px solid var(--soft-pink);
+    }
+
+    .intro h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: var(--pink);
+    }
+
+    .intro p { color: var(--muted); }
+
+    .posts {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* The clickable category buttons */
+    .category-btn {
+      display: block;
+      background: var(--white);
+      padding: 1.8rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--soft-pink);
+      text-decoration: none;
+      color: var(--text);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .category-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(248, 165, 194, 0.2);
+      border-color: var(--pink);
+    }
+
+    .category-btn h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.4rem;
+      color: var(--pink);
+    }
+
+    .category-btn p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    footer a { color: var(--pink); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      header { flex-direction: column; text-align: center; }
+      nav a { margin: 0 0.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">🧸 The Daily Mimi</a>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Hello, I’m Aimee</h1>
+      <p>Welcome to my little corner of the internet. Here lies My inside thoughts, My life, and Random moments.</p>
+    </section>
+
+    <section class="posts">
+      <!-- Music button -->
+      <a href="music.html" class="category-btn">
+        <h2>Music</h2>
+        <p>Songs, playlists, and sounds that i love.</p>
+      </a>
+
+      <!-- Fun Stuff button -->
+      <a href="fun.html" class="category-btn">
+        <h2>Fun Stuff</h2>
+        <p>Little joys, random thoughts, and things that make me smile.</p>
+      </a>
+
+      <!-- Life button -->
+      <a href="life.html" class="category-btn">
+        <h2>Life</h2>
+        <p>Everyday moments, reflections, and daily living.</p>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with care · <a href="#">Back to top</a></p>
+  </footer>
+
+</body>
+</html>
